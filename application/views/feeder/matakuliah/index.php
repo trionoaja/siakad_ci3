@@ -3,6 +3,7 @@
     <h3 class="card-title">Mata Kuliah</h3>
     <div class="card-tools">
       <a href="<?php echo site_url('matakuliah/sync');?>" class="btn btn-sm btn-primary">Sync Mata Kuliah</a>
+      
     </div>
   </div>
   <div class="card-body">

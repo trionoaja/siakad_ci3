@@ -9,7 +9,7 @@ class Matakuliah extends CI_Controller {
         $this->load->model('Matakuliah_model', 'mk');
         $this->load->library('session');
         $this->load->library('FeederApi', [
-            'url'      => 'http://192.168.10.50:3003/ws/live2.php',
+            'url'      => 'http://localhost:3003/ws/live2.php',
             'username' => 'kampus@stmikglobal.ac.id',
             'password' => 'Global@123'
         ]);

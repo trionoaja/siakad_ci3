@@ -17,6 +17,11 @@ class Dosen_model extends CI_Model {
             ->get()
             ->result();
     }
+    public function insert($data)
+{
+    return $this->db->insert('siakad_dosen', $data);
+}
+
 
     public function insert_or_update($data)
     {
@@ -53,4 +58,9 @@ class Dosen_model extends CI_Model {
             }
         }
     }
+    public function get_by_id($id)
+    {
+    return $this->db->get_where('dosen', ['id_dosen' => $id])->row();
+    }
+
 }

@@ -12,6 +12,8 @@
       <div class="alert alert-danger"><?php echo $this->session->flashdata('error');?></div>
     <?php endif; ?>
 
+    <a href="<?= site_url('dosen/create') ?>" class="btn btn-primary mb-3">Tambah Dosen</a>
+    
     <table id="mahasiswaTable" class="table table-bordered table-sm">
       <thead>
         <tr>
@@ -19,6 +21,7 @@
           <th>NUPTK</th>
           <th>Nama Dosen</th>
           <th>Program Studi</th>
+          <th>Aksi</th>
         </tr>
       </thead>
       <tbody>
@@ -29,11 +32,14 @@
               <td><?php echo $item->nuptk; ?></td>
               <td><?php echo $item->nama_dosen; ?></td>
               <td><?php echo $item->nama_program_studi; ?></td>
+              <td>
+                <a href="<?php echo site_url('dosen/push/'.$item->nuptk); ?>" class="btn btn-success btn-sm">Push</a>
+              </td>
             </tr>
           <?php endforeach; ?>
         <?php else: ?>
           <tr>
-            <td colspan="3" class="text-center">Tidak ada data dosen</td>
+            <td colspan="5" class="text-center">Tidak ada data dosen</td>
           </tr>
         <?php endif; ?>
       </tbody>
